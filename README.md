@@ -1,5 +1,7 @@
 # html2json & json2html
 
+This is a modified version of [html2json](https://github.com/Jxck/html2json) intended for myself.
+
 ## How to use
 
 ### browser

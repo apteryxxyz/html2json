@@ -1,5 +1,5 @@
-(function(global) {
-  const DEBUG = false;
+(function (global) {
+  var DEBUG = false;
   var debug = DEBUG ? console.log.bind(console) : function(){};
 
   if (typeof module === 'object' && typeof module.exports === 'object') {
@@ -13,8 +13,8 @@
   function removeDOCTYPE(html) {
     return html
       .replace(/<\?xml.*\?>\n/, '')
-      .replace(/<!doctype.*\>\n/, '')
-      .replace(/<!DOCTYPE.*\>\n/, '');
+      .replace(/<!doctype.*>\n/, '')
+      .replace(/<!DOCTYPE.*>\n/, '');
   }
 
   global.html2json = function html2json(html) {
@@ -112,7 +112,7 @@
           node: 'comment',
           text: text,
         };
-        var parent = bufArray[0];
+        var parent = bufArray[0] || results;
         if (parent.child === undefined) {
           parent.child = [];
         }
